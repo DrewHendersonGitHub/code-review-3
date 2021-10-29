@@ -31,3 +31,12 @@
   background-color: rgb(169, 204, 216);
   border-color:black;
 }
+
+#results {
+  display:none;
+  text-align:justify;
+}
+
+#name {
+  margin-top:2%;
+}

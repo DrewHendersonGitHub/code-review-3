@@ -1,18 +1,19 @@
 function beepBoop(input, name, reverse) {
   let result = "";
-  let i = 0;
+  let count = 0;
+  let choice = 0;
   if (name) {
     name = (", ").concat(name);
   }
-  for (let i2 = 0; i2 <= parseInt(input); i2++) {
+  for (let i = 0; i <= parseInt(input); i++) {
     if (reverse === 'yes') {
-      i = input - i2;
+      count = input - i;
     }
     else {
-      i = i2;
+      count = i;
     }
-    let choice = 0;
-    let digits = i.toString().split("");
+    choice = 0;
+    let digits = count.toString().split("");
     digits.forEach(function(digit) {
       for (let j = 1; j <= 3; j++) {
         if (parseInt(digit) === j && choice < j) {
@@ -30,12 +31,15 @@ function beepBoop(input, name, reverse) {
       result = result.concat("Won't you be my neighbor" + name + "? ")
     }
     else {
-      result = result.concat(i.toString() + ", ");
+      result = result.concat(count.toString() + ", ");
     }
   }
   result = result.split("");
   result.pop();
-  result.pop();
+  if (choice === 0) {
+    result.pop();
+    result.push(".");
+  }
   result = result.join("");
   return result;
 }
@@ -44,6 +48,7 @@ $(document).ready(function() {
   $("#form1").submit(function(event) {
     event.preventDefault();
     $(".results").text(beepBoop($("input#input").val(), $("input#name").val(), $("input:radio[name=reverse]:checked").val()));
-    $("#results").show();
+    $("#results").fadeIn();
+    $("#form1").toggle();
   });
 });
