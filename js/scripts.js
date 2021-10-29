@@ -1,22 +1,22 @@
 function beepBoop(input) {
   let result = "";
   for (let i = 0; i <= parseInt(input); i++) {
-    let value = 0;
+    let choice = 0;
     let digits = i.toString().split("");
     digits.forEach(function(digit) {
       for (let j = 1; j <= 3; j++) {
-        if (digit === j.toString() && value <= j) {
-          value = j;
+        if (parseInt(digit) === j && choice < j) {
+          choice = j;
         }
       }
     });
-    if (value === 1) {
+    if (choice === 1) {
       result = result.concat("Beep!, ")
     }
-    else if (value === 2) {
+    else if (choice === 2) {
       result = result.concat("Boop!, ")
     }
-    else if (value === 3) {
+    else if (choice === 3) {
       result = result.concat("Won't you be my neighbor?, ")
     }
     else {
@@ -30,4 +30,10 @@ function beepBoop(input) {
   return result;
 }
 
-console.log(beepBoop("99"));
+console.log(beepBoop("5"));
+
+$document.ready(function() {
+  $("form1").submit(function(event) {
+    event.preventDefault();
+  });
+});
