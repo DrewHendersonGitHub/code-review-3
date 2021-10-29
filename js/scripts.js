@@ -13,20 +13,25 @@ function beepBoop(input) {
         value = 2;
       }
     });
+    digits.forEach(function(thing) {
+      if (thing === '3') {
+        value = 3;
+      }
+    });
     if (value === 1) {
       result = result.concat("Beep!, ")
     }
     if (value === 2) {
       result = result.concat("Boop!, ")
     }
+    if (value === 3) {
+      result = result.concat("Won't you be my neighbor?, ")
+    }
     if (value === 0) {
       result = result.concat(i.toString() + ", ");
     }
-    console.log(digits);
-    console.log(value);
-    console.log(result);
   }
   return result;
 }
 
-console.log(beepBoop("122"));
+console.log(beepBoop("13"));
