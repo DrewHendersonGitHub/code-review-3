@@ -8,17 +8,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mr. Robogers</title>
+  <title>Mr. Roboger's Neighborhood</title>
 </head>
 <body>
   <h1 class="centered">Mr. Robogers!</h1>
-  <h5 class="centered">Enter in a positive number:</h5>
+  <h5 class="centered">Input a positive number:</h5>
+  <br><br>
   <div class="container">
 
     <form id="form1">
       <div class="form-group">
-        <label for="input"> input here:</label>
-        <input id="input" class="form-control" type="text" required="required">
+        <label for="name">Enter your name?</label>
+        <input id="name" class="form-control" type="text">
       </div>
       
       <div class="container">
@@ -38,10 +39,12 @@
             </label>
           </span>
 
-          <span class="form-group">
-            <label for="name">Enter your name?</label>
-            <input id="name" class="form-control" type="text">
-          </span>
+          <div class="form-group">
+            <div class="enter">
+              <label for="input">Enter Here:</label>
+              <input id="input" class="form-control" type="text" required="required">
+            </div>
+          </div>
         </div>
       </div>
     </form>
