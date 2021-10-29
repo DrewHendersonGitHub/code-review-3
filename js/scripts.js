@@ -8,10 +8,18 @@ function beepBoop(input) {
         value = 1;
       }
     });
+    digits.forEach(function(thing) {
+      if (thing === '2') {
+        value = 2;
+      }
+    });
     if (value === 1) {
       result = result.concat("Beep!, ")
     }
-    else {
+    if (value === 2) {
+      result = result.concat("Boop!, ")
+    }
+    if (value === 0) {
       result = result.concat(i.toString() + ", ");
     }
     console.log(digits);
