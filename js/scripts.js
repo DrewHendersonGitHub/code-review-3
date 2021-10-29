@@ -30,10 +30,10 @@ function beepBoop(input) {
   return result;
 }
 
-console.log(beepBoop("5"));
-
-$document.ready(function() {
-  $("form1").submit(function(event) {
+$(document).ready(function() {
+  $("#form1").submit(function(event) {
     event.preventDefault();
+    $(".results").text(beepBoop($("input#input").val()));
+    $("#results").show();
   });
 });

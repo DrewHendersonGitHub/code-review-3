@@ -14,9 +14,22 @@
   <h1 class="centered">Mr. Robogers!</h1>
   <h5 class="centered">Enter in a positive number:</h5>
   <div class="container">
+
     <form id="form1">
-      
+      <div class="form-group">
+        <label for="input"> input here:</label>
+        <input id="input" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn btn-success" id="btn1">do it</button>
+      <span class="checkbox">
+        <label for="accept"><input type="checkbox" id="accept" value="yes"> Reverse</label>
+      </span>
     </form>
+
+    <div id="results">
+      <p class="results"></p>
+    </div>
+
   </div>
 </body>
 </html>
