@@ -5,6 +5,7 @@ function beepBoop(input, name, reverse) {
   if (name) {
     name = (", ").concat(name);
   }
+  
   for (let i = 0; i <= parseInt(input); i++) {
     if (reverse === 'yes') {
       count = input - i;
@@ -12,6 +13,7 @@ function beepBoop(input, name, reverse) {
     else {
       count = i;
     }
+
     choice = 0;
     let digits = count.toString().split("");
     digits.forEach(function(digit) {
@@ -21,6 +23,7 @@ function beepBoop(input, name, reverse) {
         }
       }
     });
+
     if (choice === 1) {
       result = result.concat("Beep! ")
     }
@@ -34,6 +37,7 @@ function beepBoop(input, name, reverse) {
       result = result.concat(count.toString() + ", ");
     }
   }
+  
   result = result.split("");
   result.pop();
   if (choice === 0) {
