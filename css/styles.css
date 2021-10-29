@@ -1,3 +1,33 @@
 .centered {
   text-align: center;
 }
+
+.bottom {
+  background-color: rgb(83, 152, 209);
+  outline: solid navy 5px;
+  margin-top:5%;
+  padding:5%;
+}
+
+#reverse {
+  margin-left:5%;
+  margin-right:2%;
+  font-size:large;
+}
+
+.radio {
+  margin: 1%;
+  font-size:large;
+}
+
+.btn1 {
+  background-color: rgb(121, 183, 202);
+  border-color:black;
+  border-radius:10px;
+  font-size:large;
+}
+
+.btn1:hover {
+  background-color: rgb(169, 204, 216);
+  border-color:black;
+}

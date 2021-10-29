@@ -20,12 +20,31 @@
         <label for="input"> input here:</label>
         <input id="input" class="form-control" type="text">
       </div>
-      <button type="submit" class="btn btn-success" id="btn1">do it</button>
-      <span class="checkbox">
-        <label for="accept"><input type="checkbox" id="accept" value="yes"> Reverse</label>
-      </span>
-    </form>
+      
+      <div class="container">
+        <div class="bottom">
+          <button type="submit" class="btn btn1" id="btn1">Enter:</button>
+          
+          <span id="reverse">Reverse Order?</span>
+          <span class="radio">
+            <label>
+              <input type="radio" name="reverse" value="yes">Yes
+            </label>
+          </span>
+          <span class="radio">
+            <label>
+              <input type="radio" name="reverse" value="no" checked>No
+            </label>
+          </span>
 
+          <span class="form-group">
+            <label for="name">Enter your name?</label>
+            <input id="name" class="form-control" type="text">
+          </span>
+        </div>
+      </div>
+    </form>
+    
     <div id="results">
       <p class="results"></p>
     </div>
